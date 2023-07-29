@@ -1,0 +1,8 @@
+const svg = d3.select('svg')
+
+// from jquery import $
+// const svg = $('svg')
+
+d3.selectAll('p').style('color', () => randomColor)
+
+svg.append('circle').attr()
