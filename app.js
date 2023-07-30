@@ -1,8 +1,4 @@
-import * as d3 from "d3";
-const svg = d3.select("svg");
-
-// from jquery import $
-// const svg = $('svg')
+console.log(d3);
 
 const div = d3
   .select("div")
@@ -12,8 +8,10 @@ const div = d3
   .append("p")
   .text((dta) => dta);
 
+let randomColor = "green";
 const coloredParagraphs = d3.selectAll("p").style("color", () => randomColor);
 
+const svg = d3.select("svg");
 svg
   .append("circle")
   .attr("cx", "50%")
@@ -33,12 +31,13 @@ const rides = [
   { name: "🐂", speed: 99 },
 ];
 
-svg.selectAll().data(rides).enter().update().exit();
+// const span = d3.select("span");
+// const span = d3.selectAll("span").data(rides).enter().update().exit();
 
-const xScale = d3.scaleBand().range().domain();
+// const xScale = d3.scaleBand().range().domain();
 
 const yScale = d3
-  .select("rect")
+  .select("graph")
   .transition()
   .duration(2000)
   .attr("width", "400");
